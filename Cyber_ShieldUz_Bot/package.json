@@ -1,0 +1,9 @@
+{
+  "name": "Cyber_ShieldUz_Bot",
+  "private": true,
+  "scripts": {
+    "deploy": "tgcloud push",
+    "status": "tgcloud status",
+    "run": "tgcloud run"
+  }
+}
