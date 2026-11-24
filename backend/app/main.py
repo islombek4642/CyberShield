@@ -2,14 +2,15 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import settings
 from app.core.database import Base, engine
+from app.core.init_db import init_db
 from app.api.v1.auth import router as auth_router
 from app.api.v1.models import router as models_router
 from app.api.v1.incidents import router as incidents_router
 from app.api.v1.stream import router as stream_router
 from app.api.v1.bot import router as bot_router
 
-# Ensure tables exist
-Base.metadata.create_all(bind=engine)
+# Ensure tables and default admin user exist
+init_db()
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
