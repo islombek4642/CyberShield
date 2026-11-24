@@ -6,6 +6,7 @@ from app.api.v1.auth import router as auth_router
 from app.api.v1.models import router as models_router
 from app.api.v1.incidents import router as incidents_router
 from app.api.v1.stream import router as stream_router
+from app.api.v1.bot import router as bot_router
 
 # Ensure tables exist
 Base.metadata.create_all(bind=engine)
@@ -30,6 +31,7 @@ app.include_router(auth_router, prefix=settings.API_V1_STR)
 app.include_router(models_router, prefix=settings.API_V1_STR)
 app.include_router(incidents_router, prefix=settings.API_V1_STR)
 app.include_router(stream_router, prefix=settings.API_V1_STR)
+app.include_router(bot_router, prefix=settings.API_V1_STR)
 
 @app.get("/health")
 def health_check():
