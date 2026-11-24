@@ -1,4 +1,4 @@
-﻿# CyberShield Bir Martalik Ishga Tushirish Skripti (Windows PowerShell)
+# CyberShield Bir Martalik Ishga Tushirish Skripti (Windows PowerShell)
 
 Write-Host "==========================================================" -ForegroundColor Cyan
 Write-Host "🛡️  CyberShield SOC Platformasi Ishga Tushirilmoqda... 🛡️" -ForegroundColor Yellow
